@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Indian Global University</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<style>
+
+/*====================================
+        ABOUT PAGE CSS
+====================================*/
+
+/* Hero Section */
+
+.about-banner{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?w=1600");
+    background-size:cover;
+    background-position:center;
+    height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.about-banner h1{
+    font-size:55px;
+    font-weight:700;
+}
+
+.about-banner p{
+    font-size:20px;
+}
+
+/* About Image */
+
+.about-img img{
+    width:100%;
+    border-radius:20px;
+    transition:.5s;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.about-img img:hover{
+    transform:scale(1.05);
+}
+
+/* About Content */
+
+.about-content h2{
+    color:#0d6efd;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    line-height:30px;
+    color:#555;
+}
+
+/* Mission Vision */
+
+.mission-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.mission-card:hover{
+    transform:translateY(-10px);
+}
+
+.mission-card i{
+    font-size:55px;
+    color:#0d6efd;
+}
+
+/* Why Choose */
+
+.why-card{
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:#fff;
+
+    transition:.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.why-card:hover{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    transform:translateY(-10px);
+
+}
+
+.why-card i{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+/* Director */
+
+.director-section{
+
+    background:#f8f9fa;
+
+}
+
+.director-img{
+
+    width:280px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.director-text h2{
+
+    color:#0d6efd;
+
+}
+
+.director-text p{
+
+    line-height:30px;
+
+}
+
+/* Achievements */
+
+.achievement-card{
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+}
+
+.achievement-card:hover{
+
+    transform:scale(1.05);
+
+}
+
+.achievement-card h1{
+
+    color:#0d6efd;
+
+    font-size:50px;
+
+    font-weight:700;
+
+}
+
+/* Highlights */
+
+.highlights{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+.highlight-box{
+
+    padding:30px;
+
+}
+
+.highlight-box h1{
+
+    font-size:55px;
+
+    font-weight:bold;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+footer a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    color:#0d6efd;
+
+}
+
+footer i{
+
+    transition:.3s;
+
+}
+
+footer i:hover{
+
+    color:#0d6efd;
+
+    transform:scale(1.2);
+
+}
+
+/* Animation */
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.about-banner{
+
+height:320px;
+
+}
+
+.about-banner h1{
+
+font-size:38px;
+
+}
+
+.director-img{
+
+width:220px;
+
+margin-bottom:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.about-banner{
+
+height:260px;
+
+}
+
+.about-banner h1{
+
+font-size:30px;
+
+}
+
+.about-banner p{
+
+font-size:16px;
+
+}
+
+.about-content{
+
+margin-top:30px;
+
+}
+
+.highlight-box h1{
+
+font-size:35px;
+
+}
+
+}
+
+
+</style>
+
+<body>
+
+<!--================ NAVBAR =================-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold fs-3" href="index.html">
+🎓 Indian Global University
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="file:///D:/COLLAGE/collage.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageabout.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collagecourse.html">Courses</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageteacher.html">Teachers</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collagestudent.html">Students</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageresults.html">Results</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageevents.html">Events</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="">file:///D:/COLLAGE/collagesport.html</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageactivities.html"></a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collagegallery.html">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageplacement.html">Placements</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageportfolio.html">Portfolio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collageaddmission.html">Admission</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="file:///D:/COLLAGE/collage%20contect.html">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!--================ PAGE HEADER =================-->
+
+<section class="bg-primary text-white text-center py-5">
+
+<div class="container">
+
+<h1 class="display-4 fw-bold">About Our University</h1>
+
+<p class="lead">
+Empowering Students Through Quality Education & Innovation
+</p>
+
+</div>
+
+</section>
+
+<!--================ ABOUT =================-->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=900"
+class="img-fluid rounded shadow">
+
+</div>
+
+<div class="col-lg-6">
+
+<h2 class="text-primary fw-bold mb-4">
+
+Welcome to Indian Global University
+
+</h2>
+
+<p>
+
+Indian Global University is one of India's leading educational institutions.
+We provide high-quality education with modern classrooms, advanced laboratories,
+digital libraries, experienced faculty, sports facilities and excellent placement opportunities.
+
+</p>
+
+<p>
+
+Our mission is to develop skilled professionals, responsible citizens and future leaders
+through innovation, research and practical learning.
+
+</p>
+
+<div class="row mt-4">
+
+<div class="col-6">
+
+<h3 class="text-primary">5000+</h3>
+
+<p>Students</p>
+
+</div>
+
+<div class="col-6">
+
+<h3 class="text-primary">250+</h3>
+
+<p>Faculty Members</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ MISSION & VISION =================-->
+
+<section class="bg-light py-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="card shadow border-0 p-4 h-100">
+
+<h2 class="text-primary">
+
+<i class="bi bi-bullseye"></i> Our Mission
+
+</h2>
+
+<p class="mt-3">
+
+To provide world-class education,
+promote innovation,
+develop leadership skills
+and prepare students for global careers.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-6">
+
+<div class="card shadow border-0 p-4 h-100">
+
+<h2 class="text-success">
+
+<i class="bi bi-eye-fill"></i> Our Vision
+
+</h2>
+
+<p class="mt-3">
+
+To become India's most trusted university
+known for academic excellence,
+research,
+innovation and outstanding placements.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Why Choose Indian Global University?</h2>
+<p>We provide world-class education with modern facilities.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="card shadow border-0 h-100 text-center p-4">
+<i class="bi bi-mortarboard-fill display-3 text-primary"></i>
+<h4 class="mt-3">Quality Education</h4>
+<p>Experienced faculty with practical learning and industry-focused curriculum.</p>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card shadow border-0 h-100 text-center p-4">
+<i class="bi bi-building display-3 text-success"></i>
+<h4 class="mt-3">Modern Campus</h4>
+<p>Smart classrooms, digital library, laboratories and Wi-Fi enabled campus.</p>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card shadow border-0 h-100 text-center p-4">
+<i class="bi bi-briefcase-fill display-3 text-danger"></i>
+<h4 class="mt-3">100% Placement Support</h4>
+<p>Leading companies visit our campus every year for recruitment.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= DIRECTOR MESSAGE ================= -->
+
+<section class="bg-light py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-4">
+
+<img src="https://randomuser.me/api/portraits/men/45.jpg"
+class="img-fluid rounded shadow">
+
+</div>
+
+<div class="col-lg-8">
+
+<h2 class="text-primary">Director's Message</h2>
+
+<p class="mt-3">
+
+Welcome to Indian Global University.
+
+We believe education is not only about obtaining a degree but also about developing confidence, leadership and innovation. Our goal is to prepare students for successful careers and responsible citizenship.
+
+</p>
+
+<h5 class="mt-4">Dr. Rajesh Sharma</h5>
+
+<p>Director, Indian Global University</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold text-primary">Awards & Achievements</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card shadow border-0 text-center p-4">
+
+<h1 class="text-primary">50+</h1>
+
+<h5>National Awards</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow border-0 text-center p-4">
+
+<h1 class="text-success">150+</h1>
+
+<h5>Research Projects</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow border-0 text-center p-4">
+
+<h1 class="text-danger">500+</h1>
+
+<h5>Campus Recruitments</h5>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card shadow border-0 text-center p-4">
+
+<h1 class="text-warning">25+</h1>
+
+<h5>Years of Excellence</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= UNIVERSITY HIGHLIGHTS ================= -->
+
+<section class="bg-primary text-white py-5">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<h1>5000+</h1>
+
+<p>Students</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>250+</h1>
+
+<p>Faculty</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>120+</h1>
+
+<p>Courses</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h1>98%</h1>
+
+<p>Placement Rate</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+
+<h3>Indian Global University</h3>
+
+<p>
+Providing quality education with innovation, research and excellent placements.
+</p>
+
+</div>
+
+<div class="col-md-4">
+
+<h4>Quick Links</h4>
+
+<ul class="list-unstyled">
+
+<li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+
+<li><a href="courses.html" class="text-white text-decoration-none">Courses</a></li>
+
+<li><a href="admission.html" class="text-white text-decoration-none">Admission</a></li>
+
+<li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-md-4">
+
+<h4>Contact Us</h4>
+
+<p><i class="bi bi-geo-alt-fill"></i> New Delhi, India</p>
+
+<p><i class="bi bi-envelope-fill"></i> info@igu.edu</p>
+
+<p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+
+<div class="mt-3">
+
+<i class="bi bi-facebook fs-3 me-3"></i>
+<i class="bi bi-instagram fs-3 me-3"></i>
+<i class="bi bi-twitter fs-3 me-3"></i>
+<i class="bi bi-youtube fs-3"></i>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+© 2026 Indian Global University | All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
