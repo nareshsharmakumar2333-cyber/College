@@ -12,11 +12,8 @@
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<link rel="stylesheet" href="css/style.css">
-</head>
-  <style>
-
-    /* ===========================
+<style>
+/* ===========================
    GOOGLE FONT
 =========================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
@@ -41,7 +38,6 @@ body{
 /* ===========================
    NAVBAR
 =========================== */
-
 .navbar{
     background:linear-gradient(90deg,#0d6efd,#003f88);
     box-shadow:0 8px 20px rgba(0,0,0,.2);
@@ -69,12 +65,16 @@ body{
 }
 
 /* ===========================
-   SLIDER
+   SLIDER FIX
 =========================== */
+.carousel-inner, .carousel-item {
+    height: 90vh;
+}
 
 .slider-img{
-    height:90vh;
-    object-fit:cover;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
 .carousel-caption{
@@ -96,7 +96,6 @@ body{
 /* ===========================
    BUTTONS
 =========================== */
-
 .btn-primary{
     border-radius:40px;
     padding:12px 28px;
@@ -116,7 +115,6 @@ body{
 /* ===========================
    SECTION
 =========================== */
-
 section{
     padding-top:70px;
     padding-bottom:70px;
@@ -136,7 +134,6 @@ section p{
 /* ===========================
    CARDS
 =========================== */
-
 .card{
     border:none;
     border-radius:18px;
@@ -166,7 +163,6 @@ section p{
 /* ===========================
    FACILITIES
 =========================== */
-
 .bg-primary i{
     margin-bottom:15px;
     transition:.3s;
@@ -179,23 +175,23 @@ section p{
 /* ===========================
    GALLERY
 =========================== */
-
 .gallery img{
     width:100%;
     height:250px;
     object-fit:cover;
     border-radius:15px;
     transition:.4s;
+    cursor:pointer;
 }
 
 .gallery img:hover{
     transform:scale(1.05);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
 /* ===========================
    COUNTER
 =========================== */
-
 .counter{
     background:#0d6efd;
     color:#fff;
@@ -209,9 +205,9 @@ section p{
 /* ===========================
    FOOTER
 =========================== */
-
 footer{
     background:#111;
+    color:#fff;
 }
 
 footer h3,
@@ -241,1588 +237,507 @@ footer i:hover{
 /* ===========================
    RESPONSIVE
 =========================== */
-
 @media(max-width:992px){
-
-.slider-img{
-    height:60vh;
-}
-
-.carousel-caption h1{
-    font-size:36px;
-}
-
+    .carousel-inner, .carousel-item, .slider-img{
+        height:60vh !important;
+    }
+    .carousel-caption h1{
+        font-size:36px;
+    }
 }
 
 @media(max-width:768px){
-
-.slider-img{
-    height:50vh;
-}
-
-.carousel-caption{
-    bottom:10%;
-}
-
-.carousel-caption h1{
-    font-size:26px;
-}
-
-.carousel-caption p{
-    font-size:15px;
-}
-
-section h2{
-    font-size:30px;
-}
-
-.card img{
-    height:220px;
-}
-
-}
-
-
-
-/* ==========================================
-   STYLE.CSS PART-2
-   Teachers, Students, Events, Gallery,
-   Forms, Footer, Animations
-==========================================*/
-
-/* ---------- ABOUT ---------- */
-
-.about-img{
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.about-img img{
-    width:100%;
-    transition:.5s;
-}
-
-.about-img img:hover{
-    transform:scale(1.05);
-}
-
-/* ---------- COURSE CARDS ---------- */
-
-.course-card{
-    transition:.4s;
-    border-radius:20px;
-}
-
-.course-card:hover{
-    transform:translateY(-12px);
-}
-
-.course-card img{
-    height:220px;
-    object-fit:cover;
-}
-
-/* ---------- TEACHERS ---------- */
-
-.teacher-card{
-    text-align:center;
-    border-radius:20px;
-    overflow:hidden;
-    background:#fff;
-}
-
-.teacher-card img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    margin:25px auto;
-    object-fit:cover;
-    border:5px solid #0d6efd;
-}
-
-.teacher-card h4{
-    font-weight:700;
-    color:#0d6efd;
-}
-
-.teacher-card p{
-    color:#666;
-}
-
-.teacher-card:hover{
-    transform:translateY(-10px);
-}
-
-/* ---------- STUDENTS ---------- */
-
-.student-card{
-    border-radius:20px;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.student-card img{
-    height:250px;
-    object-fit:cover;
-}
-
-.student-card:hover{
-    transform:scale(1.03);
-}
-
-.student-card h5{
-    color:#0d6efd;
-    font-weight:700;
-}
-
-.student-card .badge{
-    font-size:15px;
-}
-
-/* ---------- EVENTS ---------- */
-
-.event-card img{
-    height:250px;
-    object-fit:cover;
-}
-
-.event-card{
-    border-radius:20px;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.event-card:hover{
-    transform:translateY(-12px);
-}
-
-/* ---------- SPORTS ---------- */
-
-.sport-box{
-
-    background:#fff;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    transition:.4s;
-
-    text-align:center;
-
-}
-
-.sport-box:hover{
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    transform:translateY(-10px);
-
-}
-
-.sport-box i{
-
-    font-size:60px;
-
-}
-
-/* ---------- ACTIVITIES ---------- */
-
-.activity-card{
-
-    padding:30px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    transition:.4s;
-
-    background:#fff;
-
-}
-
-.activity-card:hover{
-
-    background:#ffc107;
-
-    color:#000;
-
-}
-
-/* ---------- GALLERY ---------- */
-
-.gallery img{
-
-    border-radius:20px;
-
-    transition:.4s;
-
-    cursor:pointer;
-
-}
-
-.gallery img:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-
-}
-
-/* ---------- COUNTER ---------- */
-
-.counter-box{
-
-    padding:30px;
-
-}
-
-.counter-box h1{
-
-    font-size:55px;
-
-    font-weight:700;
-
-}
-
-.counter-box p{
-
-    font-size:20px;
-
-}
-
-/* ---------- TESTIMONIAL ---------- */
-
-.testimonial{
-
-    border-radius:20px;
-
-    background:#fff;
-
-    padding:30px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-
-    transition:.4s;
-
-}
-
-.testimonial:hover{
-
-    transform:translateY(-10px);
-
-}
-
-/* ---------- ADMISSION FORM ---------- */
-
-.form-control{
-
-    border-radius:10px;
-
-    padding:12px;
-
-}
-
-.form-select{
-
-    border-radius:10px;
-
-    padding:12px;
-
-}
-
-textarea{
-
-    resize:none;
-
-}
-
-.form-control:focus{
-
-    border-color:#0d6efd;
-
-    box-shadow:0 0 8px rgba(13,110,253,.3);
-
-}
-
-
-.recruiter-logo{
-    height:80px;
-    object-fit:contain;
-    transition:0.3s;
-}
-
-.recruiter-logo:hover{
-    transform:scale(1.1);
-}
-
-
-
-
-
-
-
-/* ---------- CONTACT ---------- */
-
-.contact-box{
-
-    padding:35px;
-
-    border-radius:20px;
-
-    background:#fff;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-
-}
-
-/* ---------- LOGIN ---------- */
-
-.login-box{
-
-    max-width:500px;
-
-    margin:auto;
-
-    background:#fff;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.2);
-
-}
-
-/* ---------- FOOTER ---------- */
-
-footer{
-
-    background:#111;
-
-    color:#fff;
-
-}
-
-footer ul{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-footer ul li{
-
-    margin:10px 0;
-
-}
-
-footer ul li a{
-
-    color:#ccc;
-
-    text-decoration:none;
-
-}
-
-footer ul li a:hover{
-
-    color:#0d6efd;
-
-}
-
-footer .social i{
-
-    width:45px;
-
-    height:45px;
-
-    line-height:45px;
-
-    border-radius:50%;
-
-    background:#222;
-
-    text-align:center;
-
-    margin-right:10px;
-
-    transition:.4s;
-
-}
-
-footer .social i:hover{
-
-    background:#0d6efd;
-
-    color:#fff;
-
-}
-
-/* ---------- SCROLL BUTTON ---------- */
-
-#topBtn{
-
-    position:fixed;
-
-    right:20px;
-
-    bottom:20px;
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    display:none;
-
-    z-index:999;
-
-    font-size:22px;
-
-}
-
-#topBtn:hover{
-
-    background:#ffc107;
-
-    color:#000;
-
-}
-
-/* ---------- ANIMATIONS ---------- */
-
-.fade-up{
-
-    animation:fadeUp .8s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
+    .carousel-inner, .carousel-item, .slider-img{
+        height:50vh !important;
     }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
+    .carousel-caption{
+        bottom:10%;
+        padding:15px;
     }
-
-}
-
-.zoom{
-
-    animation:zoom .8s;
-
-}
-
-@keyframes zoom{
-
-    from{
-
-        transform:scale(.8);
-
-        opacity:0;
-
+    .carousel-caption h1{
+        font-size:26px;
     }
-
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
-
+    .carousel-caption p{
+        font-size:15px;
     }
-
+    section h2{
+        font-size:30px;
+    }
+    .card img{
+        height:220px;
+    }
 }
-
-/* ---------- RESPONSIVE ---------- */
-
-@media(max-width:768px){
-
-.teacher-card img{
-
-width:150px;
-
-height:150px;
-
-}
-
-.counter-box h1{
-
-font-size:35px;
-
-}
-
-.login-box{
-
-padding:25px;
-
-}
-
-}
-
-
-  </style>
+</style>
+</head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-
 <div class="container">
 
-<a class="navbar-brand fw-bold fs-3" href="#">
+<a class="navbar-brand fw-bold" href="index.html">
 🎓 Indian Global University
 </a>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+    <span class="navbar-toggler-icon"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="menu">
-
 <ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link active" href="index.html">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageabout.html">About</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collagecourse.html">Courses</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageteacher.html">Teachers</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collagestudent.html">Students</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageresults.html">Results</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageevents.html">Events</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="">file:///D:/COLLAGE/collagesport.html</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageactivities.html"></a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collagegallery.html">Gallery</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageplacement.html">Placements</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageportfolio.html">Portfolio</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collageaddmission.html">Admission</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="file:///D:/COLLAGE/collage%20contect.html">Contact</a>
-</li>
-
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
+<li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
+<li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#placements">Placements</a></li>
+<li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
-
 </div>
 
 </div>
-
 </nav>
 
 <!-- ================= SLIDER ================= -->
-
 <div id="collegeSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-<div class="carousel-indicators">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#collegeSlider" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
 
-<button data-bs-target="#collegeSlider" data-bs-slide-to="0" class="active"></button>
-<button data-bs-target="#collegeSlider" data-bs-slide-to="1"></button>
-<button data-bs-target="#collegeSlider" data-bs-slide-to="2"></button>
-<button data-bs-target="#collegeSlider" data-bs-slide-to="3"></button>
-<button data-bs-target="#collegeSlider" data-bs-slide-to="4"></button>
-<button data-bs-target="#collegeSlider" data-bs-slide-to="5"></button>
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600" class="d-block w-100 slider-img" alt="Campus 1">
+            <div class="carousel-caption">
+                <h1>Welcome To Indian Global University</h1>
+                <p>Future Begins Here</p>
+                <a href="#admission" class="btn btn-warning btn-lg">Apply Now</a>
+            </div>
+        </div>
 
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600" class="d-block w-100 slider-img" alt="Campus 2">
+            <div class="carousel-caption">
+                <h1>World Class Infrastructure</h1>
+                <p>State of the art laboratories and libraries</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600" class="d-block w-100 slider-img" alt="Campus 3">
+            <div class="carousel-caption">
+                <h1>Experienced Faculty</h1>
+                <p>Learn from the industry experts</p>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600" class="d-block w-100 slider-img" alt="Campus 4">
+            <div class="carousel-caption">
+                <h1>Vibrant Student Life</h1>
+                <p>Endless opportunities in sports and cultural events</p>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600" class="d-block w-100 slider-img" alt="Campus 5">
+            <div class="carousel-caption">
+                <h1>Global Opportunities</h1>
+                <p>Collaborations with top international universities</p>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1600" class="d-block w-100 slider-img" alt="Campus 6">
+            <div class="carousel-caption">
+                <h1>Top Placements</h1>
+                <p>High packages in leading MNCs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#collegeSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#collegeSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
-
-<div class="carousel-inner">
-
-<div class="carousel-item active">
-
-<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600"
-class="d-block w-100 slider-img">
-
-<div class="carousel-caption">
-
-<h1>Welcome To Indian Global University</h1>
-
-<p>Future Begins Here</p>
-
-<a href="admission.html" class="btn btn-warning btn-lg">
-Apply Now
-</a>
-
-</div>
-
-</div>
-
-<div class="carousel-item">
-
-<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600"
-class="d-block w-100 slider-img">
-
-</div>
-
-<div class="carousel-item">
-
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600"
-class="d-block w-100 slider-img">
-
-</div>
-
-<div class="carousel-item">
-
-<img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600"
-class="d-block w-100 slider-img">
-
-</div>
-
-<div class="carousel-item">
-
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1600"
-class="d-block w-100 slider-img">
-
-</div>
-
-<div class="carousel-item">
-
-<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1600"
-class="d-block w-100 slider-img">
-
-</div>
-
-</div>
-
-<button class="carousel-control-prev"
-data-bs-target="#collegeSlider"
-data-bs-slide="prev">
-
-<span class="carousel-control-prev-icon"></span>
-
-</button>
-
-<button class="carousel-control-next"
-data-bs-target="#collegeSlider"
-data-bs-slide="next">
-
-<span class="carousel-control-next-icon"></span>
-
-</button>
-
-</div>
-
-<!-- About section aur baaki sections agle part me aayenge -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- ================= ABOUT ================= -->
-
-<section class="py-5 bg-light">
-
+<section id="about" class="py-5 bg-light">
 <div class="container">
-
 <div class="row align-items-center">
-
 <div class="col-lg-6">
-
-<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900"
-class="img-fluid rounded shadow">
-
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900" class="img-fluid rounded shadow">
 </div>
-
 <div class="col-lg-6">
-
-<h2 class="fw-bold text-primary">
-About Indian Global University
-</h2>
-
+<h2 class="fw-bold text-primary">About Indian Global University</h2>
 <p class="mt-4">
-
-Indian Global University is one of India's leading institutions,
-offering world-class education, modern laboratories, digital classrooms,
-international collaborations, sports facilities, placement support,
-research opportunities, and student-focused learning.
-
+Indian Global University is one of India's leading institutions, offering world-class education, modern laboratories, digital classrooms, international collaborations, sports facilities, placement support, research opportunities, and student-focused learning.
 </p>
-
-<a href="about.html" class="btn btn-primary">
-Read More
-</a>
-
+<a href="#" class="btn btn-primary">Read More</a>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <!-- ================= COURSES ================= -->
-
-<section class="py-5">
-
+<section id="courses" class="py-5">
 <div class="container">
-
-<h2 class="text-center fw-bold mb-5">
-
-Our Courses
-
-</h2>
-
+<h2 class="text-center fw-bold mb-5">Our Courses</h2>
 <div class="row g-4">
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow h-100">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500"
-class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500" class="card-img-top">
 <div class="card-body">
-
 <h4>BCA</h4>
-
 <p>Bachelor of Computer Applications</p>
-
-<a href="courses.html" class="btn btn-primary w-100">
-View Details
-</a>
-
+<a href="#" class="btn btn-primary w-100">View Details</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow h-100">
-
-<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500"
-class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500" class="card-img-top">
 <div class="card-body">
-
 <h4>BBA</h4>
-
 <p>Bachelor of Business Administration</p>
-
-<a href="courses.html"
-class="btn btn-primary w-100">
-
-View Details
-
-</a>
-
+<a href="#" class="btn btn-primary w-100">View Details</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow h-100">
-
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500"
-class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500" class="card-img-top">
 <div class="card-body">
-
 <h4>B.Tech</h4>
-
 <p>Engineering Programs</p>
-
-<a href="courses.html"
-class="btn btn-primary w-100">
-
-View Details
-
-</a>
-
+<a href="#" class="btn btn-primary w-100">View Details</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow h-100">
-
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500"
-class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500" class="card-img-top">
 <div class="card-body">
-
 <h4>MBA</h4>
-
 <p>Master of Business Administration</p>
-
-<a href="courses.html"
-class="btn btn-primary w-100">
-
-View Details
-
-</a>
-
+<a href="#" class="btn btn-primary w-100">View Details</a>
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <!-- ================= FACILITIES ================= -->
-
 <section class="py-5 bg-primary text-white">
-
 <div class="container">
-
-<h2 class="text-center mb-5">
-
-Campus Facilities
-
-</h2>
-
+<h2 class="text-center mb-5 text-white">Campus Facilities</h2>
 <div class="row text-center">
-
 <div class="col-lg-3">
-
 <i class="bi bi-book fs-1"></i>
-
 <h4>Library</h4>
-
 <p>100000+ Books</p>
-
 </div>
-
 <div class="col-lg-3">
-
 <i class="bi bi-pc-display fs-1"></i>
-
 <h4>Computer Labs</h4>
-
 <p>Latest Technology</p>
-
 </div>
-
 <div class="col-lg-3">
-
 <i class="bi bi-trophy fs-1"></i>
-
 <h4>Sports</h4>
-
 <p>Indoor & Outdoor Games</p>
-
 </div>
-
 <div class="col-lg-3">
-
 <i class="bi bi-building fs-1"></i>
-
 <h4>Hostel</h4>
-
 <p>Separate Boys & Girls Hostel</p>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
 
-
-
 <!-- ================= TEACHERS ================= -->
-
-<section class="py-5">
-
+<section id="teachers" class="py-5">
 <div class="container">
-
-<h2 class="text-center fw-bold mb-5">
-
-Our Faculty
-
-</h2>
-
+<h2 class="text-center fw-bold mb-5">Our Faculty</h2>
 <div class="row g-4">
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow">
-
-<img src="https://randomuser.me/api/portraits/men/32.jpg"
-class="card-img-top">
-
+<img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top">
 <div class="card-body text-center">
-
 <h5>Dr. Rajesh Sharma</h5>
-
 <p>Computer Science</p>
-
-<a href="teachers.html"
-class="btn btn-outline-primary">
-
-View Profile
-
-</a>
-
+<a href="#" class="btn btn-outline-primary">View Profile</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow">
-
-<img src="https://randomuser.me/api/portraits/women/45.jpg"
-class="card-img-top">
-
+<img src="https://randomuser.me/api/portraits/women/45.jpg" class="card-img-top">
 <div class="card-body text-center">
-
 <h5>Dr. Priya Kapoor</h5>
-
 <p>Business Management</p>
-
-<a href="teachers.html"
-class="btn btn-outline-primary">
-
-View Profile
-
-</a>
-
+<a href="#" class="btn btn-outline-primary">View Profile</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow">
-
-<img src="https://randomuser.me/api/portraits/men/55.jpg"
-class="card-img-top">
-
+<img src="https://randomuser.me/api/portraits/men/55.jpg" class="card-img-top">
 <div class="card-body text-center">
-
 <h5>Prof. Aman Singh</h5>
-
 <p>Engineering</p>
-
-<a href="teachers.html"
-class="btn btn-outline-primary">
-
-View Profile
-
-</a>
-
+<a href="#" class="btn btn-outline-primary">View Profile</a>
 </div>
-
 </div>
-
 </div>
-
 <div class="col-lg-3 col-md-6">
-
 <div class="card shadow">
-
-<img src="https://randomuser.me/api/portraits/women/65.jpg"
-class="card-img-top">
-
+<img src="https://randomuser.me/api/portraits/women/65.jpg" class="card-img-top">
 <div class="card-body text-center">
-
 <h5>Dr. Neha Verma</h5>
-
 <p>Mathematics</p>
-
-<a href="teachers.html"
-class="btn btn-outline-primary">
-
-View Profile
-
-</a>
-
+<a href="#" class="btn btn-outline-primary">View Profile</a>
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- ================= STUDENTS SECTION ================= -->
-
-<section class="py-5 bg-light">
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-primary">Our Brilliant Students</h2>
-            <p>Meet our talented students from different courses.</p>
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Student 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow h-100">
-                    <img src="https://randomuser.me/api/portraits/men/11.jpg" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5>Rahul Sharma</h5>
-                        <p>BCA 1st Year</p>
-                        <span class="badge bg-success">85%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Student 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow h-100">
-                    <img src="https://randomuser.me/api/portraits/women/25.jpg" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5>Priya Verma</h5>
-                        <p>BBA 2nd Year</p>
-                        <span class="badge bg-success">91%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Student 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow h-100">
-                    <img src="https://randomuser.me/api/portraits/men/41.jpg" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5>Aman Singh</h5>
-                        <p>B.Tech CSE</p>
-                        <span class="badge bg-success">88%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Student 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card shadow h-100">
-                    <img src="https://randomuser.me/api/portraits/women/36.jpg" class="card-img-top">
-                    <div class="card-body text-center">
-                        <h5>Neha Kapoor</h5>
-                        <p>MBA</p>
-                        <span class="badge bg-success">94%</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center mt-4">
-            <a href="students.html" class="btn btn-primary btn-lg">
-                View All Students
-            </a>
-        </div>
-
-    </div>
+<section id="students" class="py-5 bg-light">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Our Brilliant Students</h2>
+<p>Meet our talented students from different courses.</p>
+</div>
+<div class="row g-4">
+<div class="col-lg-3 col-md-6">
+<div class="card shadow h-100">
+<img src="https://randomuser.me/api/portraits/men/11.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h5>Rahul Sharma</h5>
+<p>BCA 1st Year</p>
+<span class="badge bg-success">85%</span>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card shadow h-100">
+<img src="https://randomuser.me/api/portraits/women/25.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h5>Priya Verma</h5>
+<p>BBA 2nd Year</p>
+<span class="badge bg-success">91%</span>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card shadow h-100">
+<img src="https://randomuser.me/api/portraits/men/41.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h5>Aman Singh</h5>
+<p>B.Tech CSE</p>
+<span class="badge bg-success">88%</span>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card shadow h-100">
+<img src="https://randomuser.me/api/portraits/women/36.jpg" class="card-img-top">
+<div class="card-body text-center">
+<h5>Neha Kapoor</h5>
+<p>MBA</p>
+<span class="badge bg-success">94%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 
 <!-- ================= EVENTS ================= -->
-
-<section class="py-5">
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Latest College Events</h2>
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-lg-4">
-                <div class="card shadow">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=700"
-                        class="card-img-top">
-                    <div class="card-body">
-                        <h4>Annual Cultural Fest</h4>
-                        <p>Music, Dance, Drama and Fashion Show.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card shadow">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700"
-                        class="card-img-top">
-                    <div class="card-body">
-                        <h4>Science Exhibition</h4>
-                        <p>Students showcase innovative science models.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card shadow">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700"
-                        class="card-img-top">
-                    <div class="card-body">
-                        <h4>Technical Workshop</h4>
-                        <p>AI, Robotics and Programming Workshop.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+<section id="events" class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Latest College Events</h2>
+</div>
+<div class="row g-4">
+<div class="col-lg-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=700" class="card-img-top">
+<div class="card-body">
+<h4>Annual Cultural Fest</h4>
+<p>Music, Dance, Drama and Fashion Show.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700" class="card-img-top">
+<div class="card-body">
+<h4>Science Exhibition</h4>
+<p>Students showcase innovative science models.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700" class="card-img-top">
+<div class="card-body">
+<h4>Technical Workshop</h4>
+<p>AI, Robotics and Programming Workshop.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 
 <!-- ================= SPORTS ================= -->
-
 <section class="py-5 bg-primary text-white">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2>Sports Activities</h2>
-        </div>
-
-        <div class="row text-center">
-
-            <div class="col-lg-3">
-                <i class="bi bi-trophy-fill display-3"></i>
-                <h4>Cricket</h4>
-            </div>
-
-            <div class="col-lg-3">
-                <i class="bi bi-dribbble display-3"></i>
-                <h4>Football</h4>
-            </div>
-
-            <div class="col-lg-3">
-                <i class="bi bi-award-fill display-3"></i>
-                <h4>Basketball</h4>
-            </div>
-
-            <div class="col-lg-3">
-                <i class="bi bi-star-fill display-3"></i>
-                <h4>Volleyball</h4>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ACTIVITIES ================= -->
-
-<section class="py-5">
-
 <div class="container">
-
 <div class="text-center mb-5">
-
-<h2 class="fw-bold">
-
-Student Activities
-
-</h2>
-
+<h2 class="text-white">Sports Activities</h2>
 </div>
-
 <div class="row text-center">
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h3>🎭 Cultural Club</h3>
-
-<p>Dance, Music & Drama</p>
-
+<div class="col-lg-3">
+<i class="bi bi-trophy-fill display-3"></i>
+<h4>Cricket</h4>
 </div>
-
+<div class="col-lg-3">
+<i class="bi bi-dribbble display-3"></i>
+<h4>Football</h4>
 </div>
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h3>💻 Coding Club</h3>
-
-<p>Programming Competitions</p>
-
+<div class="col-lg-3">
+<i class="bi bi-award-fill display-3"></i>
+<h4>Basketball</h4>
 </div>
-
+<div class="col-lg-3">
+<i class="bi bi-star-fill display-3"></i>
+<h4>Volleyball</h4>
 </div>
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h3>🤖 Robotics Club</h3>
-
-<p>Innovation & Technology</p>
-
 </div>
-
 </div>
-
-</div>
-
-</div>
-
 </section>
-
-
 
 <!-- ================= GALLERY ================= -->
-
-<section class="container py-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold text-primary">Campus Gallery</h2>
-        <p>Explore Our Beautiful Campus</p>
-    </div>
-
-    <div class="row g-4">
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=1" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=2" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=3" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=4" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=5" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=6" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=7" class="img-fluid rounded shadow">
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <img src="https://picsum.photos/400/300?random=8" class="img-fluid rounded shadow">
-        </div>
-
-    </div>
+<section id="gallery" class="container py-5">
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Campus Gallery</h2>
+<p>Explore Our Beautiful Campus</p>
+</div>
+<div class="row g-4 gallery">
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=1" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=2" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=3" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=4" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=5" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=6" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=7" class="img-fluid rounded shadow"></div>
+<div class="col-lg-3 col-md-6"><img src="https://picsum.photos/400/300?random=8" class="img-fluid rounded shadow"></div>
+</div>
 </section>
 
 <!-- ================= PLACEMENTS ================= -->
-
- <section class="bg-light py-5">
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-primary">Top Recruiters</h2>
-        </div>
-
-        <div class="row text-center g-4">
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-building display-3 text-primary"></i>
-                    <h5 class="mt-3">TCS</h5>
-                    <p>Tata Consultancy Services</p>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-cpu display-3 text-success"></i>
-                    <h5 class="mt-3">Infosys</h5>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-laptop display-3 text-danger"></i>
-                    <h5 class="mt-3">Wipro</h5>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-globe display-3 text-warning"></i>
-                    <h5 class="mt-3">Accenture</h5>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-server display-3 text-info"></i>
-                    <h5 class="mt-3">IBM</h5>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card shadow p-4 h-100">
-                    <i class="bi bi-pc-display display-3 text-secondary"></i>
-                    <h5 class="mt-3">HCL</h5>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+<section id="placements" class="bg-light py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Top Recruiters</h2>
+</div>
+<div class="row text-center g-4">
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-building display-3 text-primary"></i><h5 class="mt-3">TCS</h5><p>Tata Consultancy</p></div></div>
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-cpu display-3 text-success"></i><h5 class="mt-3">Infosys</h5><p>Tech Giant</p></div></div>
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-laptop display-3 text-danger"></i><h5 class="mt-3">Wipro</h5><p>Global IT</p></div></div>
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-globe display-3 text-warning"></i><h5 class="mt-3">Accenture</h5><p>Consulting</p></div></div>
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-server display-3 text-info"></i><h5 class="mt-3">IBM</h5><p>Technology</p></div></div>
+<div class="col-md-2 col-6"><div class="card shadow p-4 h-100"><i class="bi bi-pc-display display-3 text-secondary"></i><h5 class="mt-3">HCL</h5><p>Enterprise</p></div></div>
+</div>
+</div>
 </section>
 
 <!-- ================= COUNTER ================= -->
-
 <section class="py-5 bg-primary text-white">
-
 <div class="container">
-
 <div class="row text-center">
-
-<div class="col-md-3">
-<h1>5000+</h1>
-<p>Students</p>
+<div class="col-md-3"><h1>5000+</h1><p>Students</p></div>
+<div class="col-md-3"><h1>250+</h1><p>Teachers</p></div>
+<div class="col-md-3"><h1>100+</h1><p>Courses</p></div>
+<div class="col-md-3"><h1>98%</h1><p>Placement</p></div>
 </div>
-
-<div class="col-md-3">
-<h1>250+</h1>
-<p>Teachers</p>
 </div>
-
-<div class="col-md-3">
-<h1>100+</h1>
-<p>Courses</p>
-</div>
-
-<div class="col-md-3">
-<h1>98%</h1>
-<p>Placement</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <!-- ================= TESTIMONIAL ================= -->
-
 <section class="container py-5">
-
 <div class="text-center mb-5">
-
-<h2 class="fw-bold">
-
-Student Reviews
-
-</h2>
-
+<h2 class="fw-bold">Student Reviews</h2>
 </div>
-
-<div class="row">
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h5>Rahul Sharma</h5>
-
-⭐⭐⭐⭐⭐
-
-<p>
-
-Best University with modern facilities and excellent teachers.
-
-</p>
-
+<div class="row g-4">
+<div class="col-md-4"><div class="card shadow p-4"><h5>Rahul Sharma</h5>⭐⭐⭐⭐⭐<p>Best University with modern facilities and excellent teachers.</p></div></div>
+<div class="col-md-4"><div class="card shadow p-4"><h5>Priya Verma</h5>⭐⭐⭐⭐⭐<p>Amazing campus and placement support.</p></div></div>
+<div class="col-md-4"><div class="card shadow p-4"><h5>Aman Singh</h5>⭐⭐⭐⭐⭐<p>Highly recommended for engineering students.</p></div></div>
 </div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h5>Priya Verma</h5>
-
-⭐⭐⭐⭐⭐
-
-<p>
-
-Amazing campus and placement support.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card shadow p-4">
-
-<h5>Aman Singh</h5>
-
-⭐⭐⭐⭐⭐
-
-<p>
-
-Highly recommended for engineering students.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
-
-<footer class="bg-dark text-white pt-5 pb-3">
-
+<footer id="contact" class="bg-dark text-white pt-5 pb-3">
 <div class="container">
-
 <div class="row">
-
 <div class="col-md-4">
-
 <h3>Indian Global University</h3>
-
-<p>
-
-Providing Quality Education Since 1995.
-
-</p>
-
+<p>Providing Quality Education Since 1995.</p>
 </div>
-
 <div class="col-md-4">
-
 <h4>Quick Links</h4>
-
 <ul class="list-unstyled">
-
-<li><a href="about.html" class="text-white">About</a></li>
-<li><a href="courses.html" class="text-white">Courses</a></li>
-<li><a href="gallery.html" class="text-white">Gallery</a></li>
-<li><a href="admission.html" class="text-white">Admission</a></li>
-
+<li><a href="#about" class="text-white">About</a></li>
+<li><a href="#courses" class="text-white">Courses</a></li>
+<li><a href="#gallery" class="text-white">Gallery</a></li>
+<li><a href="#admission" class="text-white">Admission</a></li>
 </ul>
-
 </div>
-
 <div class="col-md-4">
-
 <h4>Contact</h4>
-
 <p>Email : info@igu.edu</p>
-
 <p>Phone : +91 9876543210</p>
-
 <p>New Delhi, India</p>
-
 <div>
-
 <i class="bi bi-facebook fs-3 me-2"></i>
-
 <i class="bi bi-instagram fs-3 me-2"></i>
-
 <i class="bi bi-twitter fs-3 me-2"></i>
-
 <i class="bi bi-youtube fs-3"></i>
-
 </div>
-
 </div>
-
 </div>
-
 <hr>
-
-<p class="text-center">
-
-© 2026 Indian Global University | All Rights Reserved
-
-</p>
-
+<p class="text-center">© 2026 Indian Global University | All Rights Reserved</p>
 </div>
-
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
